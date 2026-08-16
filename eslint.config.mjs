@@ -3,6 +3,9 @@ import js from "@eslint/js"
 import stylisticJs from "@stylistic/eslint-plugin-js"
 
 export default [
+  {
+    ignores: ["dist/**"],
+  },
   js.configs.recommended,
   {
     files: ["**/*.js"],
@@ -13,7 +16,6 @@ export default [
       },
       ecmaVersion: "latest",
     },
-    ignores: ["dist/**"],
     plugins: {
       "@stylistic/js": stylisticJs,
     },
